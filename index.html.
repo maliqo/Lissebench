@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Lissebench — Boutique</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f5f5;
+    color: #111;
+}
+
+/* ACCÈS ANTICIPÉ */
+#access {
+    position: fixed;
+    inset: 0;
+    background: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 9999;
+}
+
+.access-box {
+    background: white;
+    width: 100%;
+    max-width: 420px;
+    padding: 35px 25px;
+    border-radius: 22px;
+    text-align: center;
+}
+
+.access-box h1 {
+    font-size: 36px;
+    margin: 0 0 10px;
+}
+
+.access-box p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.access-box input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.access-box button {
+    width: 100%;
+    margin-top: 12px;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    background: #111;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+#error {
+    color: red;
+    min-height: 22px;
+    margin-top: 12px;
+}
+
+/* SITE */
+#site {
+    display: none;
+}
+
+header {
+    background: #111;
+    color: white;
+    padding: 17px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: 800;
+}
+
+.cart {
+    background: white;
+    color: #111;
+    padding: 9px 15px;
+    border-radius: 22px;
+    font-weight: bold;
+}
+
+/* HERO */
+.hero {
+    padding: 75px 6%;
+    background: linear-gradient(135deg, #111, #444);
+    color: white;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin: 0 0 12px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    background: white;
+    color: #111;
+    text-decoration: none;
+    padding: 13px 22px;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+/* PRODUITS */
+section {
+    padding: 45px 6%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    font-size: 32px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 22px;
+}
+
+.card {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 4px 18px #00000015;
+}
+
+.card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.info {
+    padding: 18px;
+}
+
+.info h3 {
+    margin: 0 0 8px;
+}
+
+.price {
+    font-weight: 800;
+    font-size: 20px;
+    margin: 12px 0;
+}
+
+.buy {
+    border: none;
+    background: #111;
+    color: white;
+    padding: 11px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.buy:hover {
+    opacity: 0.8;
+}
+
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin-top: 30px;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+   
